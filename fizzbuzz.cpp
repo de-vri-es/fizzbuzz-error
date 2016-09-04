@@ -34,7 +34,7 @@ template<typename...> struct result {};
 
 template<int n, typename... R>
 struct fizzbuzz_to_impl {
-       using type = typename fizzbuzz_to_impl<n - 1, R..., fizzbuzz_n<n>>::type;
+       using type = typename fizzbuzz_to_impl<n - 1, fizzbuzz_n<n>, R...>::type;
 };
 
 template<typename... R>
